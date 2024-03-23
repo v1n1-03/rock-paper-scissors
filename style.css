@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Germania+One&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&family=Creepster&family=Germania+One&family=Splash&display=swap');
+
+body{
+    text-align: center;
+    background: linear-gradient(300deg,#620076,#000a76,#005e76,#710076);
+    background-size: 240% 240%;
+    animation: gradient-animation 24s ease infinite;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+button{
+    cursor: pointer;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: "Germania One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: "Splash", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+a{
+  color: inherit;
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#btn button{
+    background-color: blue;
+}
+
+#btn button img{
+    padding: 2px;
+    width: 130px;
+    height: 185px;
+}
+
+#play{
+    display: none;
+    margin-top: 1rem;
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10px;
+    background-color: rgb(43, 214, 226);
+    font-size: 2.5rem;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.result{
+    display: none;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.result p{
+    font-size: 2rem;
+    font-family: "Cantora One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.result img{
+    padding: 8px;
+    width: 130px;
+    height: 185px;
+    background-color: blue;
+}
+
+#winner{
+  margin-top: 1.5rem;
+  font-size: 2.4rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  #btn button:hover{
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-30px)
+	}
+}

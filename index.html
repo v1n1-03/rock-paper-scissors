@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game!</title>
+    <link rel="stylesheet" href="reset.csss">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+    <section class="choose">
+        <h2>CHOOSE!</h2>
+        <div id="btn">
+            <button type="button" id="a"><img src="images/rock.jpg" alt="closed hand" onclick="rock()"></button>
+            <button type="button" id="b"><img src="images/paper.jpg" alt="open hand" onclick="paper()"></button>
+            <button type="button" id="c"><img src="images/scissors.jpg" alt="hand with V fingers" onclick="scissors()"></button>
+        </div>
+        <button type="submit" id="play" onclick="battle()">Play!</button>
+        <div><a href="https://www.vectorstock.com/royalty-free-vector/rock-paper-scissors-hand-gesture-vector-25169737">Vector image by VectorStock / vectorstock</a></div>
+    </section>
+    <section class="result">
+        <div>
+            <p>You:</p>
+            <img id="rock" src="images/rock.jpg" alt="closed hand">
+            <img id="paper" src="images/paper.jpg" alt="open hand">
+            <img id="scissors" src="images/scissors.jpg" alt="hand with V fingers">
+        </div>
+        <div>
+            <p>Opponent:</p>
+            <img id="rocko" src="images/rock.jpg" alt="closed hand">
+            <img id="papero" src="images/paper.jpg" alt="open hand">
+            <img id="scissorso" src="images/scissors.jpg" alt="hand with V fingers">
+        </div>
+    </section>
+    <div id="winner"></div>
+    <script src="script.js"></script>
+</body>
+</html>
