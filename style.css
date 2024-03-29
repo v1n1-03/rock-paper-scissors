@@ -54,6 +54,7 @@ a{
 #play{
     display: none;
     margin-top: 1rem;
+    margin-bottom: 1.2rem;
     width: 9rem;
     height: 4rem;
     border-radius: 10px;
