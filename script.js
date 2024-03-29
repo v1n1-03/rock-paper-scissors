@@ -1,11 +1,10 @@
-//scolha aleatória da máquina
+//machine's choice
 opcoes =["r", "p", "s"]
 machine = opcoes[Math.floor(Math.random()*opcoes.length)]
-//estilo para selecioner fundo dos cards das escolhas
 stylea = document.querySelector("#a").style
 styleb = document.querySelector("#b").style
 stylec = document.querySelector("#c").style
-//cards que aparecem depois de clicar em play
+//Card that appears after clicking on play
 r = document.querySelector("#rock").style
 p = document.querySelector("#paper").style
 s = document.querySelector("#scissors").style
@@ -14,12 +13,12 @@ ro = document.querySelector("#rocko").style
 po = document.querySelector("#papero").style
 so = document.querySelector("#scissorso").style
 
-//botão de play
+//play button
 play = document.querySelector("#play").style
-//div vazia para escrever o vencedor
+again = document.querySelector("#again").style
+//div for write who wins
 texto = document.querySelector("#winner")
 
-//mudar a cor dos cards ao clicar, selecionar jogada ao clicar,fazer o botão de jogar aparecer
 function rock(){
     player = "r"
     stylea.backgroundColor = "yellow"
@@ -44,13 +43,27 @@ function scissors(){
     play.display = "inline"
 }
 
-//ao clicar no botão de jogar
+function playagain(){
+    document.querySelector(".choose").style.display = "inline"
+    document.querySelector(".result").style.display = "none"
+    texto.innerHTML = ""
+    again.display = "none"
+    machine = opcoes[Math.floor(Math.random()*opcoes.length)]
+    r.display = "inline"
+    s.display = "inline"
+    p.display = "inline"
+    ro.display = "inline"
+    po.display = "inline"
+    so.display = "inline"
+}
+
+//play button
 function battle(){
-    //fazer a section choose sumir e a result aparecer
+    //section choose is gone and section result appear
     document.querySelector(".choose").style.display = "none"
     document.querySelector(".result").style.display = "flex"
     
-    //fazer sumir os cards que não são da jogada
+    //make the cards not selected dissapear
     if (player === "r"){
         p.display = "none"
         s.display = "none"
@@ -82,38 +95,46 @@ function battle(){
         po.display = "none"
     }
 
-    //decidir quem venceu
+    //who wins
 
     if (player === machine){
-        texto.innerHTML = "Empate!"
+        texto.innerHTML = "Tie!"
+        again.display = "inline"
     }
     
     else{
-        //pedra
+        //rock
         if(player === "r" && machine === "p"){
-            texto.innerHTML = "Você perdeu!"
+            texto.innerHTML = "You lose!"
+            again.display = "inline"
         }
     
         else if(player === "r" && machine === "s"){
-            texto.innerHTML = "Você venceu!"
+            texto.innerHTML = "You win!"
+            again.display = "inline"
         }
 
-        //tesoura
+        //scissors
         if(player === "s" && machine === "r"){
-            texto.innerHTML = "Você perdeu!"
+            texto.innerHTML = "You lose!"
+            again.display = "inline"
         }
 
         else if(player === "s" && machine === "p"){
-            texto.innerHTML = "Você venceu!"
+            texto.innerHTML = "You win!"
+            again.display = "inline"
         }
 
-        //papel
+        //paper
         if(player === "p" && machine === "r"){
-            texto.innerHTML = "Você venceu!"
+            again.display = "inline"
+            texto.innerHTML = "You win!"
         }
 
         else if(player === "p" && machine === "s"){
-            texto.innerHTML = "Você perdeu!"
+            texto.innerHTML = "You lose!"
+            again.display = "inline"
         }
     }
 }   
+
